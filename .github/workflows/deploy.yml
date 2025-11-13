@@ -9,6 +9,9 @@ jobs:
   deploy:
     name: Deploy to Alternate Futures
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  # For commenting on PRs with deployment info
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
