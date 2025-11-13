@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+import afLogo from "../resources/afLogo.svg";
+import afIcon from "../resources/afIcon.svg";
+import astroLogo from "../resources/astroLogo.svg";
+import astroIcon from "../resources/astroIcon.svg";
+import addIcon from "../resources/addIcon.svg";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="title-container" role="banner">
+      <img class="logo" src={afLogo} alt="Alternate Futures logo" />
+      <img src={addIcon} alt="plus" aria-hidden="true" />
+      <img class="logo" src={astroLogo} alt="Astro logo" />
+    </div>
+    <p class="description">
+      This is a template for creating an Astro site and deploying it on Alternate Futures.
+    </p>
+    <nav aria-label="Resource links">
+      <ul role="list" class="link-card-grid">
+      <Card
+        icon={afIcon}
+        href="https://docs.alternatefutures.ai/"
+        title="Alternate Futures Documentation"
+        body="Learn about Alternate Futures & the available services by checking our official docs."
+      />
+      <Card
+        icon={astroIcon}
+        href="https://docs.astro.build/en/concepts/why-astro/"
+        title="Astro Documentation"
+        body="Learn about how Astro works and explore the official API docs."
+      />
+      <Card
+        icon={afIcon}
+        href="https://blog.alternatefutures.ai/"
+        title="Alternate Futures Blog"
+        body="Check out our blog posts about Astro and decentralized hosting."
+      />
+      <Card
+        icon={astroIcon}
+        href="https://astro.build/integrations/"
+        title="Astro Integrations"
+        body="Supercharge your project with new frameworks and libraries."
+      />
+      </ul>
+    </nav>
+  </main>
+</Layout>
+
+<style>
+  .logo {
+    width: 200px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+    height: 100vh;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .description {
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #e5e7eb;
+    width: 752px;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+</style>

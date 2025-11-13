@@ -1,0 +1,31 @@
+# Funding Options
+# Configure funding options for your project
+# Remove or comment out options you don't use
+
+# GitHub Sponsors
+# github: [your-github-username]
+
+# Open Collective
+# open_collective: your-project
+
+# Patreon
+# patreon: your-username
+
+# Cryptocurrency (Privacy-Friendly Options)
+# Create a FUNDING.md file with crypto addresses for:
+# - Bitcoin (BTC)
+# - Ethereum (ETH)
+# - Monero (XMR)
+# - Other cryptocurrencies
+
+# Custom funding URL
+# custom: ['https://yourdomain.com/donate', 'https://yourdomain.com/sponsor']
+
+# Example for crypto-focused projects:
+# custom: ['https://yourdomain.com/crypto-donations']
+
+# Note: Consider privacy-focused donation methods like:
+# - Cryptocurrency
+# - Open Collective
+# - Direct bank transfer
+# Avoid methods that track donors excessively
