@@ -1,0 +1,23 @@
+{
+  "name": "Astro + Alternate Futures Starter Kit",
+  "short_name": "Astro AF",
+  "description": "A template for creating an Astro site and deploying it on Alternate Futures (IPFS)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0C0C",
+  "theme_color": "#0C0C0C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["development", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

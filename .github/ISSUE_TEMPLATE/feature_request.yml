@@ -1,0 +1,84 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please make sure it aligns with our privacy and censorship-resistance goals.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like
+      placeholder: I would like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe alternative solutions or features you've considered
+      placeholder: I also considered...
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Ideas
+      description: If you have ideas on how to implement this, share them here
+      placeholder: This could be implemented by...
+
+  - type: checkboxes
+    id: alignment
+    attributes:
+      label: Alignment with Project Values
+      description: Please confirm this feature aligns with our principles
+      options:
+        - label: This feature maintains or improves privacy
+          required: true
+        - label: This feature does not introduce tracking or analytics
+          required: true
+        - label: This feature maintains censorship resistance
+          required: true
+        - label: This feature is compatible with static site generation
+          required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Nice to have
+        - Would be helpful
+        - Important
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or screenshots about the feature request
+      placeholder: Any other relevant information...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to contribute to this feature?
+      options:
+        - label: I am willing to submit a pull request for this feature

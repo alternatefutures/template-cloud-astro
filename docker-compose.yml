@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: astro-af-site
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  # Optional: IPFS node for local pinning
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    container_name: ipfs-node
+    ports:
+      - "4001:4001"     # IPFS swarm
+      - "5001:5001"     # IPFS API
+      - "8081:8080"     # IPFS Gateway
+    volumes:
+      - ipfs-data:/data/ipfs
+      - ipfs-staging:/export
+    restart: unless-stopped
+    environment:
+      - IPFS_PROFILE=server
+
+volumes:
+  ipfs-data:
+  ipfs-staging:
